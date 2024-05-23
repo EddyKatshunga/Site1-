@@ -1,0 +1,175 @@
+body{
+    font-family: 'Century Gothic', Calibri, serif;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+}
+
+header h1{
+    font-size: 40px;
+    font-weight: normal; /*Enlever le gras*/
+    margin: 5px;
+}
+.presentation img{
+		width: 150px; 
+		height: 180px;
+	}
+.presentation h1{
+	padding-top: 50px;
+}
+
+header{
+    height: 70px;
+    text-align: center;
+
+}
+
+footer{
+    height: 80px;
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgb(159, 33, 170);
+    border-top: 2px solid #AAA;
+	margin-top: 40px;
+}
+
+nav{
+    width: 100%;
+    background-color: rgb(131, 15, 226);
+    position: fixed;
+}
+
+nav ul{
+    margin: 0px;
+    padding: 0px;
+}
+nav li{
+    list-style-type: none; /*Retirer les puces*/
+    float: left; /*Mettre les li cotes à cotes*/
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 30px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.table{
+    display: table;
+    margin: 0 auto;
+}
+
+.menu-ind:hover, .presentation{
+    border-top: 5px solid rgb(235, 11, 186);
+    background-color: rgba(214, 18, 188, 0.15);
+}
+.menu-exp:hover, .parcours{
+    border-top: 5px solid rgb(13, 208, 214);
+    background-color: rgba(27, 196, 226, 0.15);
+}
+.menu-hob:hover, .competences{
+    border-top: 5px solid rgb(89, 13, 212);
+    background-color: rgba(44, 5, 95, 0.15);
+}
+.menu-con:hover{
+    border-top: 5px solid rgb(78, 216, 14);
+    background-color: rgba(79, 236, 5, 0.15);
+}
+nav a:hover{
+    padding: 15px 30px 20px 30px;
+}
+
+/*Styles spécifiques à la page Idenx*/
+article h1{
+    font-size: 40px;
+    font-weight: normal; /*Enlever le gras*/
+    text-align: center;
+}
+section{
+    width: 100%;
+    min-height: 300px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.sec{
+    margin: 0px 10%;
+}
+.gauche{
+    float: left;
+    width: 30%;
+}
+.droite{
+    float: left;
+    width: 70%;
+}
+.cleft, .cright, .sousleft, .sousright{
+    width: 50%;
+    float: left;
+}
+.sec::after, .exp::after, .reco::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 780px){
+	.presentation img{
+		width: 100px;
+		height: 120px;
+	}
+	.presentation h1{
+		padding-top: 30px;
+	}
+	
+    nav li a{
+        font-size: 12px;
+        padding: 10px;
+    }
+    nav li:hover a{
+        padding: 5px 10px 10px 10px; /*Moins le 5px de la bordure*/
+    }
+    .cleft, .cright{
+        float: none;
+        width: 100%;
+    }
+	footer{
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	body h1{
+		font-size: 30px;
+	}
+	.presentation .gauche, .presentation .droite{
+		float: none;
+		width: 100%;
+	}
+	.presentation .gauche{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.presentation img{
+		width: 100px;
+		height: 120px;
+	}
+	.sec{
+		margin: 0px 2%;
+	}
+	.presentation h1{
+		padding-top: 110px;
+	}
+	nav li{
+        float: none; /*Mettre les li cotes à cotes*/
+    }
+    nav a{
+        display: block;
+        width: 100%;
+    }
+	footer{
+		margin-top: 130px;
+	}
+}
