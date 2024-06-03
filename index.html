@@ -3,145 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Présentation de Eddy Katshunga - CV">
-    <title>Mon CV en ligne</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <title>Chiffrements</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .intro {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 300px;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .card p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        a{
+            text-decoration: none;
+        }
+        @media (min-width: 768px) {
+            .card {
+                flex: 1 1 calc(33.333% - 40px);
+            }
+        }
+    </style>
 </head>
 <body>
-   <nav>
-        <div class="table">
-            <ul>
-                <li class="menu-ind">
-                    <a href="index.html">Accueil</a>
-                </li>
-                <li class="menu-exp">
-                    <a href="experiences.html">Expériences professionnelles</a>
-                </li>
-                <li class="menu-hob">
-                    <a href="hobbies.html">Loisirs</a>
-                </li>
-                <li class="menu-con">
-                    <a href="contact.html">Contactez-moi</a>
-                </li>
-            </ul>
+    <div class="header">
+        <h1>Application Web des Chiffrements</h1>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="symetrique-aes.html">Chiffrement AES</a></li>
+            <li><a href="rsa.html">Chiffrement RSA</a></li>
+            <li><a href="hybride.html">Chiffrement Hybride</a></li>
+        </ul>
+    </nav>
+    <div class="intro">
+        <p>Bienvenue sur cette application web dédiée aux différents types de chiffrements. Découvrez les méthodes de chiffrement symétrique, asymétrique et hybride, leurs avantages, leurs utilisations, et comment elles sécurisent vos données.</p>
+    </div>
+    <div class="container">
+        <a href="symetrique-aes.html">
+        <div class="card">
+            <h2>Chiffrement Symétrique AES</h2>
+            <p>Le chiffrement symétrique AES (Advanced Encryption Standard) utilise la même clé pour chiffrer et déchiffrer les données. Il est rapide et efficace pour les grandes quantités de données, mais nécessite un moyen sécurisé pour partager la clé entre les parties.</p>
         </div>
-   </nav>
-   <article>
-        <section class="presentation">
-            <div class="sec">
-                <h1>Qui suis-je?</h1>
-                <div class="gauche">
-                    <img src="photo.jpg" alt="Ma photo" style="border-radius: 100px;">
-                </div>
-                <div class="droite">
-                    <p>Je m'appelle Eddyna Katshunga, je vis à Lubumbashi</p>
-                    <p>Je suis étudiante à l'Université de Lubumbashi, faculté des Sciences 
-                        et Technologies et departement de Mathématiques et Informatique.</p>
-                    <p>Ceci est mon site personnel</p>
-                </div>
-            </div>
-        </section>
-        <section class="parcours">
-            <h1>Parcours et Expériences</h1>
-            <div class="sec">
-                <h2>Etudes faites</h2>
-                <div class="exp">
-                    <div class="gauche">
-                        <h3>2008 - 2014</h3>
-                    </div>
-                    <div class="droite">
-                        <h3>Ecole Primaire au CS Banaté et EP Ngemba-Kisalu</h3>
-                        <p>Obtention du Certificat d'Etude Primaire</p>
-                    </div>
-                </div>
-                <div class="exp">
-                    <div class="gauche">
-                        <h3>2014 - 2020</h3>
-                    </div>
-                    <div class="droite">
-                        <h3>Humanités Secondaires à l'ITPK et IDAP-ISP/KIKWIT</h3>
-                        <p>Obtention du Diplôme d'Etat en Sciences Commerciales et Informatiques</p>
-                    </div>
-                </div>
-                <div class="exp">
-                    <div class="gauche">
-                        <h3>2021 - ces jours</h3>
-                    </div>
-                    <div class="droite">
-                        <h3>Etudes Supérieures et Universitaires à l'Université de Lubumbashi</h3>
-                        <p>Obtention du Diplôme de Licence en Mathématiques - Informatiques</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="competences">
-            <h1>Compétences et niveau</h1>
-            <div class="sec">
-                <div class="cleft">
-                    <div class="sous">
-                        <div class="sousleft"><h3>Compétences</h3></div>
-                        <div class="sousright"><h3>Niveaux</h3></div>
-                    </div>
-                    <div class="sous">
-                        <div class="sousleft"><h3>Suite Office (Word, Excel...)</h3></div>
-                        <div class="sousright"><h3>Avancé</h3></div>
-                    </div>
-                    <div class="sous">
-                        <div class="sousleft"><h3>HTML / CSS</h3></div>
-                        <div class="sousright"><h3>Avancé</h3></div>
-                    </div>
-                </div>
-                <div class="cright">
-                    <div class="sous">
-                        <div class="sousleft"><h3>Compétences</h3></div>
-                        <div class="sousright"><h3>Niveaux</h3></div>
-                    </div>
-                    <div class="sous">
-                        <div class="sousleft"><h3>PHP / SQL</h3></div>
-                        <div class="sousright"><h3>Intermédiaire</h3></div>
-                    </div>
-                    <div class="sous">
-                        <div class="sousleft"><h3>Programmation Orienté Objet</h3></div>
-                        <div class="sousright"><h3>Intermédiaire</h3></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="parcours">
-            <h1>Mes projets</h1>
-            <div class="sec">
-                <div class="exp">
-                    <div class="gauche">
-                        <h3>Mon premier projet</h3>
-                    </div>
-                    <div class="droite">
-                        <h3>Réalisation d'une application web en utisant du php accompagné d'une base des données.</h3>
-                    </div>
-                </div>
-                <div class="exp">
-                    <div class="gauche">
-                        <h3>Mon deuxième projet</h3>
-                    </div>
-                    <div class="droite">
-                        <h3>Creér une application web pour une école. J'aurai donc des fonctionnalités que je vais 
-                            implementées avec du HTML, du CSS, du JavaScipt mais aussi je vais utilisé une basse des données pour 
-                          commencer à stocker toutes ces informations.</h3>
-                    </div>
-                </div>
-                <div class="exp">
-                    <div class="gauche">
-                        <h3>Mon troisième projet</h3>
-                    </div>
-                    <div class="droite">
-                        <h3>Créer une entreprise pour offir des services informatique pour pouvoir aider les 
-                            d'inombrable personnes à améliorer leurs compétences dans les domaines informatique.</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-   </article>
-   <footer>
-        <p>Site web créé par Eddyna Katshunga - 2024</p>
-   </footer>
+        </a>
+        <a href="rsa.html">
+        <div class="card">
+            <h2>Chiffrement Asymétrique RSA</h2>
+            <p>Le chiffrement asymétrique RSA (Rivest-Shamir-Adleman) utilise une paire de clés : une clé publique pour chiffrer les données et une clé privée pour les déchiffrer. Cela permet un échange de clés sécurisé et est souvent utilisé pour sécuriser les communications sur Internet.</p>
+        </div>
+        </a>
+        <a href="hybride.html">
+        <div class="card">
+            <h2>Chiffrement Hybride</h2>
+            <p>Le chiffrement hybride combine les avantages des systèmes symétriques et asymétriques. Il utilise le chiffrement asymétrique pour échanger une clé de session, qui est ensuite utilisée pour le chiffrement symétrique des données. Cela permet d'allier sécurité et performance.</p>
+        </div>
+        </a>
+    </div>
+    <footer style="text-align: center; border-top: 2px solid orange;">
+        <p>Application créée par Eddyna Katshunga - 2024</p>
+    </footer>
 </body>
 </html>

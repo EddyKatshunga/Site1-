@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiffrement et Déchiffrement AES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="generateur.js" defer></script>
+    <script src="symetrique-aes.js" defer></script>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="symetrique-aes.html">Chiffrement AES</a></li>
+            <li><a href="rsa.html">Chiffrement RSA</a></li>
+            <li><a href="hybride.html">Chiffrement Hybride</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <div class="container">
+            <h1>Chiffrement AES</h1>
+            <textarea id="message" rows="4" cols="50" placeholder="Entrez le message à chiffrer"></textarea>
+            <br>
+            <button id="genererCle">Générer la clé</button>
+            <br>
+            <label for="cle">Clé générée:</label>
+            <input type="text" id="cle" readonly>
+            <br>
+            <button id="chiffrer" disabled>Chiffrer le message</button>
+            <br>
+            <label for="messageChiffre">Message chiffré:</label>
+            <textarea id="messageChiffre" rows="4" cols="50" readonly></textarea>
+        </div>
+        <div class="container">
+            <h1>Déchiffrement AES</h1>
+            <textarea id="messageChiffreDec" rows="4" cols="50" placeholder="Entrez le message à déchiffrer"></textarea>
+            <br>
+            <label for="cleDec">Clé:</label>
+            <input type="text" id="cleDec">
+            <br>
+            <button id="dechiffrer">Déchiffrer le message</button>
+            <br>
+            <label for="messageDechiffre">Message déchiffré:</label>
+            <textarea id="messageDechiffre" rows="4" cols="50" readonly></textarea>
+        </div>
+    </div>
+    <footer style="text-align: center; border-top: 2px solid orange;">
+        <p>Application créée par Eddyna Katshunga - 2024</p>
+    </footer>
+</body>
+</html>

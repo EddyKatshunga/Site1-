@@ -1,0 +1,43 @@
+/* menu.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav.menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li {
+    float: left;
+}
+
+nav.menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav.menu ul li a:hover {
+    background-color: #111;
+}
+
+@media (max-width: 600px) {
+    nav.menu ul li {
+        float: none;
+    }
+}
+
+.content {
+    padding: 20px;
+}
